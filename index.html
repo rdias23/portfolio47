@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Testing</title>
+
+<link href="site.css" rel="stylesheet">  
+<script src="jquery-1.8.3.min.js"></script>
+<div id="banner">
+</div>
+</head>
+
+<body>
+<div id="contact">
+</div>
+<div id="carousel">
+	<div id="buttons">
+		<div id="buttons_left">
+		<a href="#" id="prev"><img id="left" src="left_arrow.gif" width="100" height="40" alt="Left Arrow"/></a>
+		</div>
+		<div id="buttons_right">
+		<a href="#" id="next"><img id="right" src="right_arrow.gif" width="100" height="40" alt="Right Arrow"/></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="clear"></div>
+
+	<div id="slides"> 
+		<ul>
+			<li id="art_link"><a href="javascript:openNewWindow_art();"><img src="art_gallery.gif" width="250" height="250" alt="Slide 1"/></a></li>
+			<li id="trivia_link"><a href="javascript:openNewWindow_trivia();"><img src="trivia_challenge.gif" width="250" height="250" alt="Slide 2"/></a></li>
+			<li id="wishlist_link"><a href="javascript:openNewWindow_wishlist();"><img src="wishlist.gif" width="250" height="250" alt="Slide 3"/></a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+
+</div>
+<div class="clear"></div>
+
+<div id="project_information">
+<div id="trivia_info">
+	<a class="app_link" href="javascript:openNewWindow_trivia();"><h1> The A Song of Ice and Fire Trivia Challenge </h1></a>
+	<p class="code_link"><a href="javascript:openNewWindow_code_trivia();">(View Code on Github)</a></p>
+	<p><span> Test your knowledge of George RR Martin's fatasy epic, with three levels of trivia! Assign administrative users to add/delete/edit questions through the admin interface.</span></p>
+</div>
+
+<div id="wishlist_info">
+	<a class="app_link" href="javascript:openNewWindow_wishlist();"><h1> The Wish List App </h1></a>
+	<p class="code_link"><a href="javascript:openNewWindow_code_wishlist();">(View Code on Github)</a></p>
+	<p><span>Create an account, log-in, drag a bookmarklet into your Chrome toolbar, and start saving product information from your favorite online retailers! (Assuming your favorite online retailers are Amazon, J Crew, and Etsy...) :P</span> </p> 
+</div>
+
+<div id="art_info">
+	<a class="app_link" href="javascript:openNewWindow_art();"><h1> Art Gallery </h1></a>
+	<p class="code_link"><a href="javascript:openNewWindow_art();">(View Code on Github)</a></p>
+	<p><span>View the art gallery of The New Police. Sort by category, shuffle, and enjoy!</span></p>
+</div>
+</div>
+
+</body>
+<script>
+	$('#slides li:eq(0)').height(300).width(300);
+	$('#slides li:eq(0) img').height(300).width(300);
+
+	if ($('#slides li:eq(0)').attr("id") == "trivia_link")
+        {
+                $("#trivia_info").show();
+                $("#wishlist_info").hide();
+                $("#art_info").hide();
+        }
+        if ($('#slides li:eq(0)').attr("id") == "wishlist_link")
+        {       
+                $("#wishlist_info").show();
+                $("#trivia_info").hide();
+                $("#art_info").hide();
+        }
+        if ($('#slides li:eq(0)').attr("id") == "art_link")
+        {
+                $("#art_info").show();
+                $("#trivia_info").hide();
+                $("#wishlist_info").hide();
+        }
+
+</script>
+<script src="site.js"></script>
+<script language=JavaScript>
+  $('a[href^="http://"]').attr('target','_blank');
+ 
+  function openNewWindow_art() {
+    popupWin = window.open('http://thenewpolice.com/',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+  function openNewWindow_trivia() {
+    popupWin = window.open('http://murmuring-beach-1225.herokuapp.com/',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+  function openNewWindow_wishlist() {
+    popupWin = window.open('http://young-harbor-6978.herokuapp.com/',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+
+function openNewWindow_code_wishlist() {
+    popupWin = window.open('https://github.com/rdias23/wishlist_app_for_heroku',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+
+function openNewWindow_code_trivia() {
+    popupWin = window.open('https://github.com/rdias23/trivia_challenge_for_heroku_with_styles',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+
+function openNewWindow_code_art() {
+    popupWin = window.open('https://github.com/rdias23/image_gallery',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+$("#left").mouseover(function(){
+  $("#buttons_left").css("background-color","blue");
+  $("#left").css("margin-right","10px");
+});
+
+$("#left").mouseout(function(){
+  $("#buttons_left").css("background-color","white");
+  $("#left").css("margin-right","5px");
+});
+
+$("#right").mouseover(function(){
+  $("#buttons_right").css("background-color","red");
+  $("#right").css("margin-left","10px");
+});
+
+$("#right").mouseout(function(){
+  $("#buttons_right").css("background-color","white");
+  $("#right").css("margin-left","5px");
+});
+
+</script>
+</html>
