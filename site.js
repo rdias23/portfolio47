@@ -29,7 +29,7 @@ $(document).ready(function() {
 			if($('#slides li:eq(1)').attr("id") == "trivia_link")
                         {
                                 $("#trivia_info").toggle("slide");
-                                $("#wishlist_info").toggle("slide");
+                                $("#portfolio47_info").toggle("slide");
                         }
                         if($('#slides li:eq(1)').attr("id") == "wishlist_link")
                         {
@@ -41,11 +41,18 @@ $(document).ready(function() {
 				$("#art_info").toggle("slide");
 				$("#trivia_info").toggle("slide");
                         }
+			if($('#slides li:eq(1)').attr("id") == "portfolio47_link")
+                        {
+                                $("#portfolio47_info").toggle("slide");
+                                $("#wishlist_info").toggle("slide");
+                        }
 
 			//set the default item to correct position
 			$('#slides ul').css({'left' : left_value});
+			$('#slides li:eq(3)').hide();
 			$('#slides li:eq(1)').height(300).width(300);
                         $('#slides li:eq(1) img').height(300).width(300);
+			$('#slides li:eq(0)').show();
                         $('#slides li:eq(2)').height(250).width(250);
                         $('#slides li:eq(2) img').height(250).width(250);
                         $('#slides li:eq(0)').height(250).width(250);
@@ -79,18 +86,25 @@ $(document).ready(function() {
                         if($('#slides li:eq(1)').attr("id") == "wishlist_link")
 			{
 				$("#wishlist_info").toggle("slide");
-				$("#trivia_info").toggle("slide");
+				$("#portfolio47_info").toggle("slide");
 			}
 			if($('#slides li:eq(1)').attr("id") == "art_link")
 			{
 				$("#art_info").toggle("slide");
                                 $("#wishlist_info").toggle("slide");
                         }
+			if($('#slides li:eq(1)').attr("id") == "portfolio47_link")
+			{
+				$("#portfolio47_info").toggle("slide");
+				$("#trivia_info").toggle("slide");
+			}	
 			
 			//set the default item to correct position
 			$('#slides ul').css({'left' : left_value});
+			$('#slides li:eq(3)').hide();	
 			$('#slides li:eq(1)').height(300).width(300);
 			$('#slides li:eq(1) img').height(300).width(300);
+			$('#slides li:eq(2)').show();
 			$('#slides li:eq(2)').height(250).width(250);
 			$('#slides li:eq(2) img').height(250).width(250);
 			$('#slides li:eq(0)').height(250).width(250);

@@ -30,6 +30,7 @@
 		<ul>
 			<li id="art_link"><a href="javascript:openNewWindow_art();"><img src="art_gallery.gif" width="250" height="250" alt="Slide 1"/></a></li>
 			<li id="trivia_link"><a href="javascript:openNewWindow_trivia();"><img src="trivia_challenge.gif" width="250" height="250" alt="Slide 2"/></a></li>
+			<li id="portfolio47_link"><a href="javascript:openNewWindow_portfolio47();"><img src="portfolio47.gif" width="250" height="250" alt="Slide 4"/></a></li>
 			<li id="wishlist_link"><a href="javascript:openNewWindow_wishlist();"><img src="wishlist.gif" width="250" height="250" alt="Slide 3"/></a></li>
 		</ul>
 		<div class="clear"></div>
@@ -53,33 +54,51 @@
 
 <div id="art_info">
 	<a class="app_link" href="javascript:openNewWindow_art();"><h1> Art Gallery </h1></a>
-	<p class="code_link"><a href="javascript:openNewWindow_art();">(View Code on Github)</a></p>
+	<p class="code_link"><a href="javascript:openNewWindow__code_art();">(View Code on Github)</a></p>
 	<p><span>View the art gallery of The New Police. Sort by category, shuffle, and enjoy!</span></p>
 </div>
+
+<div id="portfolio47_info">
+        <a class="app_link" href="javascript:openNewWindow_portfolio47();"><h1>  Portfolio 47</h1></a>
+        <p class="code_link"><a href="javascript:openNewWindow_code_portfolio47();">(View Code on Github)</a></p>
+        <p><span>Behold the amazing Portfolio 47! Like the mythical Ouroboros, watch Portfolio 47 devour itself! (for the lovers of all things recursive everywhere) </span></p>
+</div>
+
 </div>
 
 </body>
 <script>
 	$('#slides li:eq(0)').height(300).width(300);
 	$('#slides li:eq(0) img').height(300).width(300);
+	$('#slides li:eq(2)').hide();
 
 	if ($('#slides li:eq(0)').attr("id") == "trivia_link")
         {
                 $("#trivia_info").show();
                 $("#wishlist_info").hide();
                 $("#art_info").hide();
+		$("#portfolio47_info").hide();
         }
         if ($('#slides li:eq(0)').attr("id") == "wishlist_link")
         {       
                 $("#wishlist_info").show();
                 $("#trivia_info").hide();
                 $("#art_info").hide();
+		$("#portfolio47_info").hide();
         }
         if ($('#slides li:eq(0)').attr("id") == "art_link")
         {
                 $("#art_info").show();
                 $("#trivia_info").hide();
                 $("#wishlist_info").hide();
+		$("#portfolio47_info").hide();
+        }
+	if ($('#slides li:eq(0)').attr("id") == "portfolio47_link")
+        {
+                $("#portfolio47_info").show();
+                $("#trivia_info").hide();
+                $("#wishlist_info").hide();
+		$("#portfolio47_info").hide();
         }
 
 </script>
@@ -100,6 +119,11 @@
     'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
 }
 
+function openNewWindow_portfolio47() {
+    popupWin = window.open('http://portfolio47.com/',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+
 function openNewWindow_code_wishlist() {
     popupWin = window.open('https://github.com/rdias23/wishlist_app_for_heroku',
     'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
@@ -114,6 +138,12 @@ function openNewWindow_code_art() {
     popupWin = window.open('https://github.com/rdias23/image_gallery',
     'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
 }
+
+function openNewWindow_code_portfolio47() {
+    popupWin = window.open('https://github.com/rdias23/portfolio47',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0')
+}
+
 $("#left").mouseover(function(){
   $("#buttons_left").css("background-color","blue");
   $("#left").css("margin-right","10px");
