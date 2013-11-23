@@ -34,8 +34,8 @@ $(document).ready(function() {
                         if($('#slides li:eq(1)').attr("id") == "wishlist_link")
                         {
                                 $("#wishlist_info").toggle("slide");
-                       		$("#art_info").toggle("slide"); 
-			}
+			        $("#wizards_and_spaceships_info").toggle("slide");
+   			}
                         if($('#slides li:eq(1)').attr("id") == "art_link")
                         {
 				$("#art_info").toggle("slide");
@@ -46,10 +46,16 @@ $(document).ready(function() {
                                 $("#portfolio47_info").toggle("slide");
                                 $("#wishlist_info").toggle("slide");
                         }
+			if($('#slides li:eq(1)').attr("id") == "wizards_and_spaceships_link")
+                        {
+                       		$("#art_info").toggle("slide");
+				$("#wizards_and_spaceships_info").toggle("slide"); 
+			}
 
 			//set the default item to correct position
 			$('#slides ul').css({'left' : left_value});
 			$('#slides li:eq(3)').hide();
+			$('#slides li:eq(4)').hide();
 			$('#slides li:eq(1)').height(300).width(300);
                         $('#slides li:eq(1) img').height(300).width(300);
 			$('#slides li:eq(0)').show();
@@ -91,17 +97,23 @@ $(document).ready(function() {
 			if($('#slides li:eq(1)').attr("id") == "art_link")
 			{
 				$("#art_info").toggle("slide");
-                                $("#wishlist_info").toggle("slide");
+				$("#wizards_and_spaceships_info").toggle("slide");
                         }
 			if($('#slides li:eq(1)').attr("id") == "portfolio47_link")
 			{
 				$("#portfolio47_info").toggle("slide");
 				$("#trivia_info").toggle("slide");
+			}
+			if($('#slides li:eq(1)').attr("id") == "wizards_and_spaceships_link")
+                        {
+				$("#wizards_and_spaceships_info").toggle("slide"); 
+				$("#wishlist_info").toggle("slide");
 			}	
 			
 			//set the default item to correct position
 			$('#slides ul').css({'left' : left_value});
-			$('#slides li:eq(3)').hide();	
+			$('#slides li:eq(3)').hide();
+			$('#slides li:eq(4)').hide();	
 			$('#slides li:eq(1)').height(300).width(300);
 			$('#slides li:eq(1) img').height(300).width(300);
 			$('#slides li:eq(2)').show();
@@ -132,6 +144,6 @@ $(document).ready(function() {
 //a simple function to click next link
 //a timer will call this function, and the rotation will begin :)  
 function rotate() {
-	$('#next').click();
+	$('#prev').click();
 }
 

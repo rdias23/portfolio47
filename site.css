@@ -93,13 +93,13 @@ h1 {
 	color:black;
 }
 
-#trivia_info p, #wishlist_info p, #art_info p, #portfolio47_info {
+#trivia_info p, #wishlist_info p, #art_info p, #portfolio47_info p, #wizards_and_spaceships_info p {
 	text-align: center;
 	margin-left:276px;
 	width: 276px;
 }
 
-#trivia_info span, #wishlist_info span, #art_info span, #portfolio47_info span {
+#trivia_info span, #wishlist_info span, #art_info span, #portfolio47_info span, #wizards_and_spaceships_info span {
 	width: 100%;
 	text-align: right; 
 	font-style:italic;
