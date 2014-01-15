@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var item_width = $('#slides li:eq(1)').outerWidth(); 
 	var left_value = item_width * (-1); 
         
-    //move the last item before first item, just in case user click prev button
+    //move the last item before first item
 	$('#slides li:first').before($('#slides li:last'));
 	
 	//set the default item to the correct position 
@@ -48,14 +48,26 @@ $(document).ready(function() {
                         }
 			if($('#slides li:eq(1)').attr("id") == "wizards_and_spaceships_link")
                         {
-                       		$("#art_info").toggle("slide");
+				$("#legislator_info").toggle("slide");	
 				$("#wizards_and_spaceships_info").toggle("slide"); 
 			}
+			if($('#slides li:eq(1)').attr("id") == "legislator_lookup_link")
+                        {
+				$("#legislator_info").toggle("slide");
+                       		$("#film_info").toggle("slide"); 
+			}
+			if($('#slides li:eq(1)').attr("id") == "film_fan_link")
+                        {
+                                $("#film_info").toggle("slide");
+                                $("#art_info").toggle("slide");
+                        }
 
 			//set the default item to correct position
 			$('#slides ul').css({'left' : left_value});
 			$('#slides li:eq(3)').hide();
 			$('#slides li:eq(4)').hide();
+			$('#slides li:eq(5)').hide();
+			$('#slides li:eq(6)').hide();
 			$('#slides li:eq(1)').height(300).width(300);
                         $('#slides li:eq(1) img').height(300).width(300);
 			$('#slides li:eq(0)').show();
@@ -97,7 +109,7 @@ $(document).ready(function() {
 			if($('#slides li:eq(1)').attr("id") == "art_link")
 			{
 				$("#art_info").toggle("slide");
-				$("#wizards_and_spaceships_info").toggle("slide");
+				$("#film_info").toggle("slide");
                         }
 			if($('#slides li:eq(1)').attr("id") == "portfolio47_link")
 			{
@@ -109,11 +121,23 @@ $(document).ready(function() {
 				$("#wizards_and_spaceships_info").toggle("slide"); 
 				$("#wishlist_info").toggle("slide");
 			}	
-			
+			if($('#slides li:eq(1)').attr("id") == "legislator_lookup_link")
+                        {
+                                $("#legislator_info").toggle("slide");
+                                $("#wizards_and_spaceships_info").toggle("slide");
+                        }
+			if($('#slides li:eq(1)').attr("id") == "film_fan_link")
+                        {
+				$("#film_info").toggle("slide");
+                                $("#legislator_info").toggle("slide");
+                        }
+
 			//set the default item to correct position
 			$('#slides ul').css({'left' : left_value});
 			$('#slides li:eq(3)').hide();
-			$('#slides li:eq(4)').hide();	
+			$('#slides li:eq(4)').hide();
+			$('#slides li:eq(5)').hide();
+			$('#slides li:eq(6)').hide();	
 			$('#slides li:eq(1)').height(300).width(300);
 			$('#slides li:eq(1) img').height(300).width(300);
 			$('#slides li:eq(2)').show();
