@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Testing</title>
 
-<link href="site.css" rel="stylesheet">  
+<link href="site.css" rel="stylesheet">
 <script src="jquery-1.8.3.min.js"></script>
 <div id="banner">
 </div>
@@ -23,18 +23,20 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	
+
 	<div class="clear"></div>
 
-	<div id="slides"> 
+	<div id="slides">
 		<ul>
-			<li id="art_link"><a href="javascript:openNewWindow_art();"><img src="art_gallery.gif" width="250" height="250" alt="Slide 1"/></a></li>
-			<li id="trivia_link"><a href="javascript:openNewWindow_trivia();"><img src="trivia_challenge.gif" width="250" height="250" alt="Slide 2"/></a></li>
-			<li id="portfolio47_link"><a href="javascript:openNewWindow_portfolio47();"><img src="portfolio47.gif" width="250" height="250" alt="Slide 4"/></a></li>
-			<li id="wishlist_link"><a href="javascript:openNewWindow_wishlist();"><img src="wishlist.gif" width="250" height="250" alt="Slide 3"/></a></li>
-			<li id="wizards_and_spaceships_link"><a href="javascript:openNewWindow_wizards();"><img src="wizards_and_spaceships.gif" width="250" height="250" alt="Slide 5"/></a></li> 
-			<li id="legislator_lookup_link"><a href="javascript:openNewWindow_legislator();"><img src="legislator_lookup.gif" width="250" height="250" alt="Slide 6"/></a></li>
-			<li id="film_fan_link"><a href="javascript:openNewWindow_film();"><img src="film_fan.gif" width="250" height="250" alt="Slide 7"/></a></li>
+
+            <li id="asset_link"><a href="javascript:openNewWindow_assets();"><img src="asset_list.gif" width="250" height="250" alt="Slide 1"/></a></li>
+			<li id="art_link"><a href="javascript:openNewWindow_art();"><img src="art_gallery.gif" width="250" height="250" alt="Slide 2"/></a></li>
+			<li id="trivia_link"><a href="javascript:openNewWindow_trivia();"><img src="trivia_challenge.gif" width="250" height="250" alt="Slide 3"/></a></li>
+			<li id="portfolio47_link"><a href="javascript:openNewWindow_portfolio47();"><img src="portfolio47.gif" width="250" height="250" alt="Slide 5"/></a></li>
+			<li id="wishlist_link"><a href="javascript:openNewWindow_wishlist();"><img src="wishlist.gif" width="250" height="250" alt="Slide 4"/></a></li>
+			<li id="wizards_and_spaceships_link"><a href="javascript:openNewWindow_wizards();"><img src="wizards_and_spaceships.gif" width="250" height="250" alt="Slide 6"/></a></li>
+			<li id="legislator_lookup_link"><a href="javascript:openNewWindow_legislator();"><img src="legislator_lookup.gif" width="250" height="250" alt="Slide 7"/></a></li>
+			<li id="film_fan_link"><a href="javascript:openNewWindow_film();"><img src="film_fan.gif" width="250" height="250" alt="Slide 8"/></a></li>
 		</ul>
 		<div class="clear"></div>
 	</div>
@@ -52,13 +54,19 @@
 <div id="wishlist_info">
 	<a class="app_link" href="javascript:openNewWindow_wishlist();"><h1> The Wish List App </h1></a>
 	<p class="code_link"><a href="javascript:openNewWindow_code_wishlist();">(View Code on Github)</a></p>
-	<p><span>Create an account, log-in, drag a bookmarklet into your Chrome toolbar, and start saving product information from your favorite online retailers! (Assuming your favorite online retailers are Amazon, J Crew, and Etsy...) :P</span> </p> 
+	<p><span>Create an account, log-in, drag a bookmarklet into your Chrome toolbar, and start saving product information from your favorite online retailers! (Assuming your favorite online retailers are Amazon, J Crew, and Etsy...) :P</span> </p>
 </div>
 
 <div id="art_info">
 	<a class="app_link" href="javascript:openNewWindow_art();"><h1> Art Gallery </h1></a>
 	<p class="code_link"><a href="javascript:openNewWindow_code_art();">(View Code on Github)</a></p>
 	<p><span>View the art gallery of The New Police. Sort by category, shuffle, and enjoy!</span></p>
+</div>
+
+<div id="asset_info">
+    <a class="app_link" href="javascript:openNewWindow_assets();"><h1> Pictoura Asset List </h1></a>
+    <p class="code_link"><a href="javascript:openNewWindow_code_assets();">(View Code on Github)</a></p>
+    <p><span> Peruse a list of Projects, Features, and Responsive Design pages built by yours truly during his tenure at Pictoura LLC. </span></p>
 </div>
 
 <div id="portfolio47_info">
@@ -91,9 +99,10 @@
 	$('#slides li:eq(0)').height(300).width(300);
 	$('#slides li:eq(0) img').height(300).width(300);
 	$('#slides li:eq(2)').hide();
-        $('#slides li:eq(3)').hide();
+    $('#slides li:eq(3)').hide();
 	$('#slides li:eq(4)').hide();
 	$('#slides li:eq(5)').hide();
+    $('#slides li:eq(6)').hide();
 
 	if ($('#slides li:eq(0)').attr("id") == "trivia_link")
         {
@@ -104,9 +113,10 @@
 		$("#wizards_and_spaceships_info").hide();
 		$("#legislator_info").hide();
 		$("#film_info").hide();
+        $("#asset_info").hide();
         }
         if ($('#slides li:eq(0)').attr("id") == "wishlist_link")
-        {       
+        {
                 $("#wishlist_info").show();
                 $("#trivia_info").hide();
                 $("#art_info").hide();
@@ -114,6 +124,7 @@
 		$("#wizards_and_spaceships_info").hide();
 		$("#legislator_info").hide();
 		$("#film_info").hide();
+        $("#asset_info").hide();
         }
         if ($('#slides li:eq(0)').attr("id") == "art_link")
         {
@@ -124,6 +135,18 @@
 		$("#wizards_and_spaceships_info").hide();
 		$("#legislator_info").hide();
 		$("#film_info").hide();
+        $("#asset_info").hide();
+        }
+        if ($('#slides li:eq(0)').attr("id") == "asset_link")
+        {
+                $("#asset_info").show();
+                $("#art_info").hide();
+                $("#trivia_info").hide();
+                $("#wishlist_info").hide();
+        $("#portfolio47_info").hide();
+        $("#wizards_and_spaceships_info").hide();
+        $("#legislator_info").hide();
+        $("#film_info").hide();
         }
 	if ($('#slides li:eq(0)').attr("id") == "portfolio47_link")
         {
@@ -134,16 +157,18 @@
 		$("#wizards_and_spaceships_info").hide();
 		$("#legislator_info").hide();
 		$("#film_info").hide();
+        $("#asset_info").hide();
         }
 	if ($('#slides li:eq(0)').attr("id") == "wizards_and_spaceships_link")
         {
                 $("#wizards_and_spaceships_info").show();
 		$("#legislator_info").hide();
 		$("#film_info").hide();
-                $("#trivia_info").hide(); 
+                $("#trivia_info").hide();
                 $("#wishlist_info").hide();
                 $("#art_info").hide();
                 $("#portfolio47_info").hide();
+                $("#asset_info").hide();
 	}
 	if ($('#slides li:eq(0)').attr("id") == "legislator_link")
         {
@@ -154,6 +179,7 @@
                 $("#art_info").hide();
                 $("#portfolio47_info").hide();
 		$("#wizards_and_spaceships_info").hide();
+        $("#asset_info").hide();
         }
 	if ($('#slides li:eq(0)').attr("id") == "film_fan_link")
         {
@@ -163,13 +189,14 @@
                 $("#portfolio47_info").hide();
                 $("#wizards_and_spaceships_info").hide();
                 $("#legislator_info").hide();
-                $("#wishlist_info").hide(); 
+                $("#wishlist_info").hide();
+                $("#asset_info").hide();
 	}
 </script>
 <script src="site.js"></script>
 <script language=JavaScript>
   $('a[href^="http://"]').attr('target','_blank');
- 
+
   function openNewWindow_art() {
     popupWin = window.open('http://thenewpolice.com/',
     'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=1600, height=1200, left=0, top=0')
@@ -185,6 +212,11 @@
 
 function openNewWindow_portfolio47() {
     popupWin = window.open('http://portfolio47.com/',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=1600, height=1200, left=0, top=0')
+}
+
+function openNewWindow_assets() {
+    popupWin = window.open('http://portfolio47.com/asset_list',
     'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=1600, height=1200, left=0, top=0')
 }
 
@@ -215,6 +247,11 @@ function openNewWindow_code_trivia() {
 
 function openNewWindow_code_art() {
     popupWin = window.open('https://github.com/rdias23/image_gallery',
+    'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=1600, height=1200, left=0, top=0')
+}
+
+function openNewWindow_code_assets() {
+    popupWin = window.open('https://github.com/rdias23/por_asset_list',
     'open_window', 'menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=1600, height=1200, left=0, top=0')
 }
 
